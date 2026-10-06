@@ -1,0 +1,10 @@
+<html>
+<body>
+Reports a SQL statement that concatenates the value of an <code>@Entity</code> field when the same field is written
+from unsanitized HTTP input elsewhere in the project.
+<!-- tooltip end -->
+<p>This is second-order SQL injection (CWE-89): the malicious value is stored in the database first and becomes
+dangerous only when it is read back and concatenated into a query, so a check limited to one method or one call
+chain misses it. The write and the read can be in unrelated classes. Use bind parameters for the query.</p>
+</body>
+</html>
